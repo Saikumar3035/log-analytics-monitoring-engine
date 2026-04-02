@@ -26,7 +26,6 @@ print("Generating log data...")
 while True:
     level = random.choices(log_levels, weights=log_weights)[0]
 
-    # Pick message based on level
     if level == "ERROR":
         message = random.choice(error_msgs)
     else:
@@ -34,13 +33,13 @@ while True:
 
     row = [
         datetime.now().isoformat(),
-        random.choice(services),  # matches header: "service"
-        level,                    # matches header: "log_level"
-        message                   # matches header: "message"
+        random.choice(services),  
+        level,                  
+        message                   
     ]
 
     with open(LOG_FILE, "a", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(row)
 
-    time.sleep(0.5)  # avoid spamming; adjust as needed
+    time.sleep(0.5) 
