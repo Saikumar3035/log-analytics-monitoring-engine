@@ -37,9 +37,9 @@ def main():
     "z_score": row.get("z_score", 0)
             }
             send_anomaly_email(
-sender_email="",
-password="",
- to_email="",
+sender_email="saipatelmudam@gmail.com",
+password="lgxu zsds fgdq pgzx",
+ to_email="jangilisrividya@gmail.com",
 anomaly=anomaly_data
     )
 
